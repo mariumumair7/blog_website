@@ -1,13 +1,18 @@
 import { posts } from '../../data/post';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import Image from 'next/image'; 
 
-const PostDetails = ({ params }: { params: { id: string } }) => {
-  const post = posts.find((post) => post.id.toString() === params.id); 
+interface PostDetailsProps {
+  params: {
+    id: string;
+  };
+}
+
+const PostDetails = ({ params }: PostDetailsProps) => {
+  const post = posts.find((post) => post.id.toString() === params.id); // Find the post by ID
 
   if (!post) {
-    notFound(); 
+    notFound(); // If post is not found, trigger a 404 page
   }
 
   return (
@@ -30,12 +35,12 @@ const PostDetails = ({ params }: { params: { id: string } }) => {
         <Image
           src={`/images/${post?.id}.jpg`}
           alt={post?.title}
-          width={800} 
-          height={600} 
+          width={800} // Specify width
+          height={600} // Specify height
           className="w-full h-96 object-cover rounded-lg mb-6"
         />
 
-        
+        {/* Back to Home Button */}
         <div className="mt-8 text-center">
           <Link href="/">
             <span className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
