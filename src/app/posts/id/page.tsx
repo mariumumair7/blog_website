@@ -1,4 +1,3 @@
-// src/app/posts/[id]/page.tsx
 
 import { posts } from '../../data/post';
 import Link from 'next/link';
@@ -12,10 +11,10 @@ interface PostDetailsProps {
 }
 
 const PostDetails = ({ params }: PostDetailsProps) => {
-  const post = posts.find((post) => post.id.toString() === params.id); // Find the post by ID
+  const post = posts.find((post) => post.id.toString() === params.id);
 
   if (!post) {
-    notFound(); // If post is not found, trigger a 404 page
+    notFound(); 
   }
 
   return (
@@ -38,8 +37,8 @@ const PostDetails = ({ params }: PostDetailsProps) => {
         <Image
           src={`/images/${post?.id}.jpg`}
           alt={post?.title}
-          width={800} // Specify width
-          height={600} // Specify height
+          width={800}
+          height={600}
           className="w-full h-96 object-cover rounded-lg mb-6"
         />
 
@@ -55,5 +54,14 @@ const PostDetails = ({ params }: PostDetailsProps) => {
     </div>
   );
 };
+
+// Define generateStaticParams for dynamic routes
+export async function generateStaticParams() {
+  const paths = posts.map((post) => ({
+    id: post.id.toString(),
+  }));
+
+  return paths;
+}
 
 export default PostDetails;
