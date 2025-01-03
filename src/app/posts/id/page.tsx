@@ -1,6 +1,7 @@
 import { posts } from '../../data/post';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 
 interface PostDetailsProps {
   params: {
@@ -9,10 +10,10 @@ interface PostDetailsProps {
 }
 
 const PostDetails = ({ params }: PostDetailsProps) => {
-  const post = posts.find((post) => post.id.toString() === params.id); // Find the post by ID
+  const post = posts.find((post) => post.id.toString() === params.id); 
 
   if (!post) {
-    notFound(); // If post is not found, trigger a 404 page
+    notFound(); 
   }
 
   return (
