@@ -9,8 +9,16 @@ export default {
   theme: {
     extend: {
       colors: {
+        blue: {
+          600: '#3182ce',
+          700: '#2b6cb0',
+          800: '#2c5282',
+        },
         background: "var(--background)",
         foreground: "var(--foreground)",
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },
