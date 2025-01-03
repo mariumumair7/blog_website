@@ -1,3 +1,5 @@
+// src/app/posts/[id]/page.tsx
+
 import { posts } from '../../data/post';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -10,10 +12,10 @@ interface PostDetailsProps {
 }
 
 const PostDetails = ({ params }: PostDetailsProps) => {
-  const post = posts.find((post) => post.id.toString() === params.id); 
+  const post = posts.find((post) => post.id.toString() === params.id); // Find the post by ID
 
   if (!post) {
-    notFound(); 
+    notFound(); // If post is not found, trigger a 404 page
   }
 
   return (
