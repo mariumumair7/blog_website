@@ -7,6 +7,11 @@ import Image from 'next/image';
 interface PostDetailsProps {
   params: {
     id: string;
+    title: string;
+    content: string;
+    author: string
+    category: string
+    date: number;
   };
 }
 
@@ -14,7 +19,7 @@ const PostDetails = ({ params }: PostDetailsProps) => {
   const post = posts.find((post) => post.id.toString() === params.id);
 
   if (!post) {
-    notFound(); // Trigger a 404 page if post is not found
+    notFound(); 
   }
 
   return (
@@ -46,7 +51,6 @@ const PostDetails = ({ params }: PostDetailsProps) => {
   );
 };
 
-// Static Params Generation for Dynamic Route
 export async function generateStaticParams() {
   const paths = posts.map((post) => ({
     id: post.id.toString(),
