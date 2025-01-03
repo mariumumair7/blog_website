@@ -46,6 +46,7 @@ const PostDetails = ({ params }: PostDetailsProps) => {
   );
 };
 
+// Static Params Generation for Dynamic Route
 export async function generateStaticParams() {
   const paths = posts.map((post) => ({
     id: post.id.toString(),
