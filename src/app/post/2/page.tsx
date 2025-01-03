@@ -28,7 +28,7 @@ const PostPython = () => {
           and automation.
         </p>
         <p>
-          One of Python's greatest strengths is its large standard library,
+          One of Python has greatest strengths is its large standard library,
           which provides tools suited to many tasks, including connecting to
           web servers, reading and modifying files, handling data, and more.
         </p>
@@ -58,7 +58,6 @@ const PostPython = () => {
         </ul>
       </div>
       <div className="mt-8">
-        {/* Replaced <a> with <Link> for client-side navigation */}
         <Link href="/">
           <span className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
             Back to Home

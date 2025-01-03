@@ -21,8 +21,8 @@ const PostJava = () => {
       <div className="text-lg text-gray-700 leading-relaxed space-y-4 mt-6">
         <p>
           Java is one of the most popular programming languages, known for its
-          portability across platforms. It follows the principle of "write once,
-          run anywhere," meaning compiled Java code can run on all platforms
+          portability across platforms. It follows the principle of write once,
+          run anywhere, meaning compiled Java code can run on all platforms
           that support Java without needing recompilation.
         </p>
         <p>
@@ -33,7 +33,7 @@ const PostJava = () => {
         </p>
         <h2 className="text-2xl font-semibold mt-6">Platform Independence</h2>
         <p>
-          Java's platform independence is achieved through the Java Virtual
+          Java platform independence is achieved through the Java Virtual
           Machine (JVM), which allows Java code to run seamlessly on different
           devices and operating systems.
         </p>
@@ -55,7 +55,6 @@ const PostJava = () => {
         </ul>
       </div>
       <div className="mt-8">
-        {/* Replaced <a> with <Link> for client-side navigation */}
         <Link href="/">
           <span className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
             Back to Home

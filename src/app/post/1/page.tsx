@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';  // Import Link for navigation
+import Link from 'next/link';  
 
 const Post1 = () => {
   return (
@@ -20,8 +20,8 @@ const Post1 = () => {
       <div className="text-lg text-gray-700 leading-relaxed space-y-4">
         <p>
           JavaScript is one of the most popular programming languages in the world, and for good
-          reason. It's a versatile, high-level language used to create dynamic and interactive
-          elements in websites. Whether you're creating a website that responds to user input,
+          reason. It is a versatile, high-level language used to create dynamic and interactive
+          elements in websites. Whether you are creating a website that responds to user input,
           building complex animations, or creating a fully interactive web application, JavaScript
           is often the tool of choice.
         </p>
