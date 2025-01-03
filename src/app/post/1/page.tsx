@@ -1,21 +1,22 @@
-import React from 'react'
+import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';  // Import Link for navigation
 
-const post1 = () => {
+const Post1 = () => {
   return (
-<div className="container mx-auto px-6 py-8">
+    <div className="container mx-auto px-6 py-8">
       <h1 className="text-4xl font-bold text-gray-800 mb-6">Introduction To Javascript</h1>
       <p className="text-sm text-gray-500 mb-4">
         By <span className="font-semibold">John Doe</span>
       </p>
 
-       <Image
-                    src="/image1.png"
-                    alt="JavaScript"
-                    width={400}
-                    height={300}
-                    className="rounded-lg shadow-lg"
-                  />
+      <Image
+        src="/image1.png"
+        alt="JavaScript"
+        width={400}
+        height={300}
+        className="rounded-lg shadow-lg"
+      />
       <div className="text-lg text-gray-700 leading-relaxed space-y-4">
         <p>
           JavaScript is one of the most popular programming languages in the world, and for good
@@ -52,14 +53,15 @@ const post1 = () => {
         </ul>
       </div>
       <div className="mt-8">
-        <a
-          href="/"
-          className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
-        >
-          Back to Home
-        </a>  
-        </div>
-</div>
-)}
+        {/* Replace <a> with <Link> for navigation */}
+        <Link href="/">
+          <span className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+            Back to Home
+          </span>
+        </Link>
+      </div>
+    </div>
+  );
+};
 
-export default post1;
+export default Post1;

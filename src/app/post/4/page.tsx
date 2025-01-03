@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link"; 
 
 const PostCpp = () => {
   return (
@@ -10,7 +11,7 @@ const PostCpp = () => {
       </p>
 
       <Image
-        src="/image4.png" // Replace with the actual image path
+        src="/image4.png" 
         alt="C++"
         width={400}
         height={300}
@@ -52,12 +53,11 @@ const PostCpp = () => {
         </ul>
       </div>
       <div className="mt-8">
-        <a
-          href="/"
-          className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
-        >
-          Back to Home
-        </a>
+        <Link href="/">
+          <span className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+            Back to Home
+          </span>
+        </Link>
       </div>
     </div>
   );

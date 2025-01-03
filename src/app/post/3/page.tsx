@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link"; // Import Link for navigation
 
 const PostJava = () => {
   return (
@@ -54,12 +55,12 @@ const PostJava = () => {
         </ul>
       </div>
       <div className="mt-8">
-        <a
-          href="/"
-          className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
-        >
-          Back to Home
-        </a>
+        {/* Replaced <a> with <Link> for client-side navigation */}
+        <Link href="/">
+          <span className="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+            Back to Home
+          </span>
+        </Link>
       </div>
     </div>
   );
